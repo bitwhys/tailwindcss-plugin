@@ -35,6 +35,7 @@ const handler: HandlerParamType = (options) => {
       {
         ":root": {
           ...createCustomVariableFromScale(prefix, "neutral", light),
+          ...createCustomVariableFromScale(prefix, "neutral-inverted", dark),
           ...createCustomVariableFromScale(prefix, "neutral-alpha", alpha),
           ...createCustomVariableFromScale(prefix, "accent", accentLight),
           ...createCustomVariableFromScale(prefix, "accent-alpha", accentAlpha),
@@ -42,6 +43,7 @@ const handler: HandlerParamType = (options) => {
         },
         ".dark": {
           ...createCustomVariableFromScale(prefix, "neutral", dark),
+          ...createCustomVariableFromScale(prefix, "neutral-inverted", light),
           ...createCustomVariableFromScale(prefix, "neutral-alpha", darkAlpha),
           ...createCustomVariableFromScale(prefix, "accent", accentDark),
           ...createCustomVariableFromScale(prefix, "accent-alpha", accentDarkAlpha),
