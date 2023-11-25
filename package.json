@@ -24,6 +24,7 @@
   "peerDependencies": {
     "tailwindcss": ">=3"
   },
+  "packageManager": "pnpm@8.10.5",
   "author": "Bitwhys <bit@creightivedigital.io>",
   "publishConfig": {
     "access": "public"
