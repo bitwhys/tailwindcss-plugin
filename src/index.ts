@@ -161,8 +161,9 @@ const theme: ThemeParamType = (options) => {
       extend: {
         colors: {
           black: `var(--${prefix}-black)`,
-          neutral: getRadixPaletteObject(prefix, "neutral"),
-          accent: getRadixPaletteObject(prefix, "accent"),
+          neutral: getRadixPaletteObject(prefix, "neutral",true),
+          'neutral-inverted': getRadixPaletteObject(prefix, "neutral-inverted"),
+          accent: getRadixPaletteObject(prefix, "accent",true),
           //  semantic classes
         },
         textColor: {

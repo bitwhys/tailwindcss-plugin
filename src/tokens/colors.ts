@@ -47,30 +47,34 @@ const radixColorScales = {
 export const getRadixColorScales = (scale: keyof typeof radixColorScales) => {
   return radixColorScales[scale]
 }
-export const getRadixPaletteObject = (prefix: string, palette: 'neutral' | 'accent') => ({
-  1: `var(--${prefix}-${palette}-1)`,
-  2: `var(--${prefix}-${palette}-2)`,
-  3: `var(--${prefix}-${palette}-3)`,
-  4: `var(--${prefix}-${palette}-4)`,
-  5: `var(--${prefix}-${palette}-5)`,
-  6: `var(--${prefix}-${palette}-6)`,
-  7: `var(--${prefix}-${palette}-7)`,
-  8: `var(--${prefix}-${palette}-8)`,
-  9: `var(--${prefix}-${palette}-9)`,
-  10: `var(--${prefix}-${palette}-10)`,
-  11: `var(--${prefix}-${palette}-11)`,
-  12: `var(--${prefix}-${palette}-12)`,
-  a1: `var(--${prefix}-${palette}-alpha-1)`,
-  a2: `var(--${prefix}-${palette}-alpha-2)`,
-  a3: `var(--${prefix}-${palette}-alpha-3)`,
-  a4: `var(--${prefix}-${palette}-alpha-4)`,
-  a5: `var(--${prefix}-${palette}-alpha-5)`,
-  a6: `var(--${prefix}-${palette}-alpha-6)`,
-  a7: `var(--${prefix}-${palette}-alpha-7)`,
-  a8: `var(--${prefix}-${palette}-alpha-8)`,
-  a9: `var(--${prefix}-${palette}-alpha-9)`,
-  a10: `var(--${prefix}-${palette}-alpha-10)`,
-  a11: `var(--${prefix}-${palette}-alpha-11)`,
-  a12: `var(--${prefix}-${palette}-alpha-12)`,
-})
-
+export const getRadixPaletteObject = (prefix: string, palette: 'neutral' | 'neutral-inverted'| 'accent',alpha?: boolean) => {
+  const base = ({
+    1: `var(--${prefix}-${palette}-1)`,
+    2: `var(--${prefix}-${palette}-2)`,
+    3: `var(--${prefix}-${palette}-3)`,
+    4: `var(--${prefix}-${palette}-4)`,
+    5: `var(--${prefix}-${palette}-5)`,
+    6: `var(--${prefix}-${palette}-6)`,
+    7: `var(--${prefix}-${palette}-7)`,
+    8: `var(--${prefix}-${palette}-8)`,
+    9: `var(--${prefix}-${palette}-9)`,
+    10: `var(--${prefix}-${palette}-10)`,
+    11: `var(--${prefix}-${palette}-11)`,
+    12: `var(--${prefix}-${palette}-12)`,
+  })
+  const alphaChannel = alpha ? ({
+    a1: `var(--${prefix}-${palette}-alpha-1)`,
+    a2: `var(--${prefix}-${palette}-alpha-2)`,
+    a3: `var(--${prefix}-${palette}-alpha-3)`,
+    a4: `var(--${prefix}-${palette}-alpha-4)`,
+    a5: `var(--${prefix}-${palette}-alpha-5)`,
+    a6: `var(--${prefix}-${palette}-alpha-6)`,
+    a7: `var(--${prefix}-${palette}-alpha-7)`,
+    a8: `var(--${prefix}-${palette}-alpha-8)`,
+    a9: `var(--${prefix}-${palette}-alpha-9)`,
+    a10: `var(--${prefix}-${palette}-alpha-10)`,
+    a11: `var(--${prefix}-${palette}-alpha-11)`,
+    a12: `var(--${prefix}-${palette}-alpha-12)`,
+  }) : {}
+  return ({...base,...alphaChannel})
+}
