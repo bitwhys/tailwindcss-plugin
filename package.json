@@ -1,5 +1,6 @@
 {
   "name": "@bitwhys/tailwindcss-plugin",
+  "description": "Tailwind CSS plugin that provides access to radix colors and other tokens from my design language",
   "version": "0.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
